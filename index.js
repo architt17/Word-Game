@@ -23,7 +23,6 @@ document.getElementById('submit').addEventListener('click', function() {
     for (let i = 0; i < word.length; i++) {
       if (word[i] === input) {
         wordArray[i] = input;
-      
       }
       
 
@@ -34,17 +33,22 @@ document.getElementById('submit').addEventListener('click', function() {
        alert('Congrats you guess the correct word !!!!')
       document.getElementById('congrats').style.display = 'flex';
     }
-  } else {
+  } 
+  else {
+    
     remainingChances--;
     wrong += input + " ";
     document.getElementById('wo').innerText = `Wrong Words you entered : \n ${wrong}`;
     document.getElementById('message').innerText = `Incorrect! You have ${remainingChances} chances left`;
-    if (remainingChances === 0) {
+    if(remainingChances < 0){
+        location.reload();
+    }
+    else if(remainingChances === 0) {
       alert('You lost! The word was ' + word);
     //   document.getElementById('message').innerText = 'You lost! The word was ' + word;
       document.getElementById('rong').style.display = 'flex';
-
     }
+
   }
   document.getElementById('input').value = '';
 });
@@ -52,5 +56,5 @@ document.getElementById('playAgain').addEventListener('click', function() {
   location.reload();
 });
 document.getElementById('reset').addEventListener('click', function() {
-    location.reload();
+     location.reload();
   });
