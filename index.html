@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word-Game</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+</head>
+<body>
+    <div id="game">
+
+        <div id="logo" >
+
+        </div>
+        <div id = "mainh">
+            <h1>Guess The Word</h1>
+            <p id="word">_ _ _ _ _</p>
+            <p id="message"></p>
+            <input type="text" id="input" maxlength="1">
+            <button id="submit">Guess</button>
+            <p id="hint"></p>
+            <p id="wo"></p>
+          </div>
+          <div id="congrats" style="display:none;">
+            <!-- <p>Congratulations! You won the game!</p> -->
+            <button id="playAgain">Play Again</button>
+          </div>
+      </div>
+      <script src="index.js"></script>
+</body>
+</html>
