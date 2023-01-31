@@ -3,7 +3,7 @@ let wordList = [ { word: "python", hint: "programming language" }, { word: "guit
 const x = Math.floor(Math.random() * wordList.length);
 const word = wordList[x].word;
 const hint = wordList[x].hint;
-const chances = 8;
+const chances = 1;
 
 let displayWord = '';
 for (let i = 0; i < word.length; i++) {
@@ -40,7 +40,10 @@ document.getElementById('submit').addEventListener('click', function() {
     document.getElementById('wo').innerText = `Wrong Words you entered : \n ${wrong}`;
     document.getElementById('message').innerText = `Incorrect! You have ${remainingChances} chances left`;
     if (remainingChances === 0) {
-      document.getElementById('message').innerText = 'You lost! The word was ' + word;
+      alert('You lost! The word was ' + word);
+    //   document.getElementById('message').innerText = 'You lost! The word was ' + word;
+      document.getElementById('rong').style.display = 'flex';
+
     }
   }
   document.getElementById('input').value = '';
@@ -48,3 +51,6 @@ document.getElementById('submit').addEventListener('click', function() {
 document.getElementById('playAgain').addEventListener('click', function() {
   location.reload();
 });
+document.getElementById('reset').addEventListener('click', function() {
+    location.reload();
+  });
