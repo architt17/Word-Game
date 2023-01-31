@@ -71,3 +71,13 @@ body{
     padding: 20px;
     border-radius: 10px;
   }
+
+
+  #rong {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+  }
