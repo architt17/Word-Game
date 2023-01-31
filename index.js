@@ -3,7 +3,7 @@ let wordList = [ { word: "python", hint: "programming language" }, { word: "guit
 const x = Math.floor(Math.random() * wordList.length);
 const word = wordList[x].word;
 const hint = wordList[x].hint;
-const chances = 1;
+const chances = 8;
 
 let displayWord = '';
 for (let i = 0; i < word.length; i++) {
